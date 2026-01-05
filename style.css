@@ -1,0 +1,191 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #050505;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.hero-banner {
+    width: 100%;
+    max-width: 1200px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    background: #000;
+}
+
+.logo-wrapper {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 130px;
+    height: auto;
+    z-index: 20;
+    cursor: pointer;
+    opacity: 0;
+    filter: blur(10px) brightness(1.2);
+    transform: translateX(-50px); 
+    animation: wavyLeftToRightReveal 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation-delay: 0.5s;
+}
+
+.brand-logo {
+    width: 100%;
+    display: block;
+    mix-blend-mode: screen; 
+    transition: transform 0.3s ease;
+}
+
+.logo-wrapper:hover .brand-logo {
+    animation: float 2s ease-in-out infinite alternate;
+}
+
+.bg-layer {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    transition: transform 6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 1;
+}
+
+.hero-banner:hover .bg-layer {
+    transform: scale(1.15) rotate(1deg);
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(120deg, rgba(2,0,36,0.95) 0%, rgba(9,9,121,0.7) 35%, rgba(0,212,255,0.1) 100%);
+    z-index: 2;
+}
+
+.particle {
+    position: absolute;
+    background: rgba(0, 255, 255, 0.6);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    z-index: 3;
+    animation: particleFloat linear infinite;
+}
+
+.p1 { width: 6px; height: 6px; top: 20%; left: 40%; animation-duration: 10s; }
+.p2 { width: 10px; height: 10px; top: 70%; left: 80%; animation-duration: 15s; }
+.p3 { width: 4px; height: 4px; top: 40%; left: 60%; animation-duration: 8s; }
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translateY(-45%);
+    z-index: 10;
+    max-width: 600px;
+    color: #fff;
+}
+
+.headline {
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.8s ease-out 0.3s forwards;
+}
+
+.highlight {
+    color: transparent;
+    -webkit-text-stroke: 1px #00d4ff;
+    background: linear-gradient(90deg, #00d4ff, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.subtext {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #b0c4de;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.8s ease-out 0.6s forwards;
+}
+
+.wow-btn {
+    position: relative;
+    padding: 18px 45px;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #020024;
+    background: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.8s ease-out 0.9s forwards;
+}
+
+.wow-btn::before {
+    content: '';
+    position: absolute;
+    top: 100%; left: 0; width: 100%; height: 100%;
+    background: #00d4ff;
+    transition: top 0.4s ease;
+    z-index: 1; border-radius: 50px;
+}
+
+.wow-btn span { position: relative; z-index: 2; transition: color 0.4s; }
+
+.wow-btn:hover { transform: scale(1.05) translateY(-2px); box-shadow: 0 15px 30px rgba(0, 212, 255, 0.4); }
+.wow-btn:hover::before { top: 0; }
+.wow-btn:hover span { color: #fff; }
+.wow-btn:active { transform: scale(0.95); }
+
+@keyframes wavyLeftToRightReveal {
+    0% {
+        opacity: 0;
+        transform: translateX(-80px) scale(0.9);
+        filter: blur(15px) brightness(2);
+    }
+    50% {
+            opacity: 0.5;
+            transform: translateX(10px) scale(1.05); 
+            filter: blur(5px) brightness(1.5);
+    }
+    100% {
+        opacity: 0.8;
+        transform: translateX(0) scale(1);
+        filter: blur(0px) brightness(1.2);
+    }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-12px); }
+}
+
+@keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+@keyframes particleFloat { 0% { transform: translateY(0); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0); } }
+
+@media (max-width: 768px) {
+    .hero-banner { height: 500px; }
+    .content { left: 30px; right: 30px; text-align: center; }
+    .logo-wrapper { left: 50%; right: auto; transform: translateX(-50%); bottom: 20px; }
+    .headline { font-size: 36px; }
+}
