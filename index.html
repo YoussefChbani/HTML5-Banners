@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cention & AA | Cinematic Concept Deck</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="deck-container">
+        
+        <button class="nav-btn prev" onclick="moveSlide(-1)">
+            <div class="arrow-icon"></div>
+        </button>
+        <button class="nav-btn next" onclick="moveSlide(1)">
+            <div class="arrow-icon"></div>
+        </button>
+
+        <div class="slide active">
+            <div class="hero-banner">
+                <div class="logo-wrapper">
+                    <img src="cention_logo.png" alt="Cention Logo" class="brand-logo" onerror="this.style.display='none'">
+                </div>
+                <div class="bg-layer"></div>
+                <div class="overlay"></div>
+                <div class="particle p1"></div>
+                <div class="particle p2"></div>
+                <div class="particle p3"></div>
+                <div class="content">
+                    <h1 class="headline">Global Reach. <br><span class="highlight">Seamless Connection.</span></h1>
+                    <p class="subtext">Orchestrate your customer conversations with the power of AI-driven contact center solutions.</p>
+                    <button class="wow-btn"><span>Get Started</span></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide aa-beacon-slide">
+            <div class="beacon-bg"></div>
+            <div class="light-beam"></div>
+            <div class="beacon-text">
+                <div class="aa-title-huge">ALWAYS AHEAD</div>
+                <div class="aa-subtitle">THE LIGHT IN THE DARK</div>
+                <button class="aa-btn-minimal">Join The Network</button>
+            </div>
+        </div>
+
+        <div class="slide aa-pulse-slide">
+            <div class="grid-bg"></div>
+            <div class="core-container">
+                <div class="ring r1"></div>
+                <div class="ring r2"></div>
+                <div class="ring r3"></div>
+                <div class="core-text">VIXA</div>
+            </div>
+            <div class="tech-content">
+                <span class="tech-label">Live Diagnostics</span>
+                <h1 class="tech-headline">THE PULSE<br><b>OF YOUR CAR</b></h1>
+                <div class="tech-stat-row">
+                    <div class="stat-item">
+                        <span class="big-num">0.2s</span>
+                        <span class="small-lbl">Response Time</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="big-num">24/7</span>
+                        <span class="small-lbl">Active Monitor</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide patrol-slide" id="patrolSlide">
+            <div class="car-shadow"></div>
+            <div class="static-text">
+                <h1 class="reveal-h1" style="color: #111;">HERE FOR</h1>
+                <h1 class="reveal-h1" style="color: #111;">YOU.</h1>
+            </div>
+            <div class="revealed-content">
+                <h1 class="reveal-h1">HERE FOR</h1>
+                <h1 class="reveal-h1">YOU.</h1>
+                <p class="reveal-p">24/7 ROADSIDE ASSIST</p>
+                <div class="aa-badge">UK'S #1 BREAKDOWN PROVIDER</div>
+            </div>
+            <div class="scanning-beam"></div>
+        </div>
+
+    </div>
+
+    <div class="indicators-container">
+        <div class="indicator-line active"></div>
+        <div class="indicator-line"></div>
+        <div class="indicator-line"></div>
+        <div class="indicator-line"></div>
+    </div>
+
+    <button class="view-code-btn" onclick="window.location.href='https://github.com/YoussefChbani/HTML5-Banners'">View Code</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
