@@ -18,11 +18,18 @@ function moveSlide(n) {
 
 const stage = document.getElementById('patrolSlide');
 
-stage.addEventListener('mousemove', e => {
+function moveBeam(e) {
     const rect = stage.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+    
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
+    const x = clientX - rect.left;
+    const y = clientY - rect.top;
     
     stage.style.setProperty('--x', `${x}px`);
     stage.style.setProperty('--y', `${y}px`);
-});
+}
+
+stage.addEventListener('mousemove', moveBeam);
+stage.addEventListener('touchmove', moveBeam);
