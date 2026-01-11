@@ -1,27 +1,55 @@
-# Cention Animated Banner
+Cinematic Concept Deck | Cention & The AA
+A high-fidelity, interactive web presentation deck built with vanilla HTML, CSS, and JavaScript. This project demonstrates how to use advanced front-end techniques to create a cinematic storytelling experience for brand presentations without relying on heavy frameworks.
 
-A high-performance, CSS-only animated hero banner designed for modern web applications. This project demonstrates advanced CSS techniques to create fluid, engaging user experiences without relying on heavy JavaScript libraries.
+🌟 Key Features
+Zero Dependencies: Built entirely with pure HTML5, CSS3, and modern JavaScript.
 
-## 🚀 Key Features
+Cinematic Transitions: Orchestrated animations where elements enter the stage with varying delays and easing curves.
 
-* **CSS-Only Animations:** Utilizes `@keyframes` for smooth, hardware-accelerated transitions (60fps).
-* **Asset Integration:** Implements `mix-blend-mode: screen` to seamlessly integrate the corporate logo into the dark theme without requiring transparency preprocessing.
-* **Micro-Interactions:**
-    * **"Wavy" Entrance:** A custom blur-and-slide animation for the logo reveal.
-    * **Interactive Hover:** The logo floats continuously only when interacted with by the user.
-    * **Liquid Button:** A "fill-up" animation state for the Call-to-Action button.
-* **Responsive Design:** Fully fluid layout that adapts gracefully to mobile and tablet viewports.
+Interactive "Flashlight" Reveal: Slide 4 features a mouse-tracking lighting effect using CSS variables and JavaScript event listeners.
 
-## 🛠 Technologies Used
+3D CSS Transforms: Hardware-accelerated 3D rotation and perspective effects (Slide 3).
 
-* **HTML5:** Semantic markup structure.
-* **CSS3:** Flexbox, Absolute Positioning, CSS Variables, and Keyframe Animations.
+Atmospheric Visuals: Uses particle effects, gradients, and blend modes to create depth and mood.
 
-## 📂 Project Structure
+🚀 How to Run
+Download or clone the repository.
 
-```text
-/
-├── index.html        # Main markup file
-├── style.css         # All styles and animations
-├── cention_logo.png  # Brand asset
-└── README.md         # Documentation
+Ensure you have an active internet connection (required to load Google Fonts and Unsplash background images).
+
+Open index.html in any modern web browser (Chrome, Edge, Firefox, or Safari).
+
+🎬 Slide Breakdown
+This deck is designed to narrate a specific brand story for The AA and Cention.
+
+Slide 1: Global Reach (Cention)
+Visuals: Parallax background, floating particles, and a glowing "Get Started" button.
+
+Concept: Introduces Cention's AI-driven solutions. The "Floating" and "Wavy" animations on the logo create a sense of fluidity and seamless connection.
+
+Slide 2: The Beacon (The AA)
+Visuals: A scanning light beam cutting through the dark with a "ghostly" large typography effect.
+
+Concept: "Always Ahead." Represents The AA as a guiding light. It positions the brand not just as a mechanic service, but as a guardian that provides safety and direction in the dark.
+
+Slide 3: The Pulse (Vixa)
+Visuals: A 3D rotating core engine built with CSS borders and perspective transforms. Live "scrolling grid" background.
+
+Concept: "The Pulse of Your Car." Focuses on "Vixa" (Connected Car technology). The rotating rings and data stats visualize the 24/7 active monitoring and live diagnostics of the vehicle.
+
+Slide 4: The Patrol (Service)
+Visuals: The screen is dark until the user moves their mouse. A "torch" beam reveals the underlying content.
+
+Concept: "Here For You." An interactive metaphor for a patrol officer arriving at night. It reinforces the human element of roadside assistance, proving that help is always there when you look for it.
+
+🎨 Customization
+You can easily adjust the primary theme colors by editing the :root variables at the top of style.css:
+
+CSS
+
+:root {
+    --aa-yellow: #FFD200; /* Primary Brand Color */
+    /* ... */
+}
+📄 License
+This project is a concept demonstration. All brand logos (The AA, Cention) and images are property of their respective owners and used here for conceptual layout purposes only.
